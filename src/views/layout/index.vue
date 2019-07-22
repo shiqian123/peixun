@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <div id="nav">
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/about">About</router-link>
+      <el-input></el-input>
+    </div>
     <router-view/>
   </div>
 </template>

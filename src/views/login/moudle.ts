@@ -3,7 +3,7 @@ import Home from './Home.vue';
 
 export default [
      {
-        path: '/login',
+        path: '/',
         name: 'home',
         component: () => import('./index.vue'),
       }
