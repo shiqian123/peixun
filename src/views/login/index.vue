@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <el-button @click="goHome"></el-button>
+    <el-button @click="goHome">登陆</el-button>
   </div>
 </template>
 
