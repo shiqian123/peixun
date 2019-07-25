@@ -62,6 +62,7 @@ export default class Home extends Vue {
           address: '上海市普陀区金沙江路 1518 弄'
         }]
     created(){
+      debugger
        this.routeParams = JSON.parse(this.$route.query.user)
        console.log(this.routeParams)
     }
