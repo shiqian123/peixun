@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
+    {{routeParams.name}}
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
      <el-table
     :data="tableData"
@@ -34,7 +35,7 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
   },
 })
 export default class Home extends Vue {
-
+   private routeParams = ''
    private tableRowClassName({row, rowIndex}) {
         if (rowIndex === 1) {
           return 'warning-row';
@@ -60,6 +61,10 @@ export default class Home extends Vue {
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄'
         }]
+    created(){
+       this.routeParams = JSON.parse(this.$route.query.user)
+       console.log(this.routeParams)
+    }
 }
 </script>
 <style>
