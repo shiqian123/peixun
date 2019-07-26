@@ -27,6 +27,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { State, Mutation } from 'vuex-class';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 @Component({
@@ -35,6 +36,7 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
   },
 })
 export default class Home extends Vue {
+   @State(state => state.$login) private login: any
    private routeParams = ''
    private tableRowClassName({row, rowIndex}) {
         if (rowIndex === 1) {
@@ -62,7 +64,7 @@ export default class Home extends Vue {
           address: '上海市普陀区金沙江路 1518 弄'
         }]
     created(){
-      debugger
+      console.log(this.login)
        this.routeParams = JSON.parse(this.$route.query.user)
        console.log(this.routeParams)
     }

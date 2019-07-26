@@ -30,15 +30,15 @@ export default class Login extends Vue {
     passWord:'5'
   }
   private goHome(){
-    this.$fetch.post('/gguser/login',{
-      ...this.login,
-       currentLanguage:'CN'
-    }).then((data)=>{
-      console.log(data)
-    })
-    return
-    console.log(this.login)
-    return
+    // this.$fetch.post('/gguser/login',{
+    //   ...this.login,
+    //    currentLanguage:'CN'
+    // }).then((data)=>{
+    //   console.log(data)
+    // })
+    // return
+    // console.log(this.login)
+    // return
     this.$router.push({
       path:'/home',
       query: {
